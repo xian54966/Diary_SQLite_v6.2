@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::CustomContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(198, 200, 195);
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_7">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="topMargin">
+       <number>8</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_6">
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <property name="bottomMargin">
+           <number>12</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="maximumSize">
+             <size>
+              <width>15</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:#6DDF6D;
+border-radius:5px;
+hover{background:green;}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="maximumSize">
+             <size>
+              <width>15</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:#F7D674;
+border-radius:5px;
+hover{background:yellow;}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="maximumSize">
+             <size>
+              <width>15</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:#F76677;
+border-radius:5px;
+hover{background:red;}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>按日期</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>按项目</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QTreeWidget" name="treeWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>240</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTreeWidget{border:1px solid gray;}
+QHeaderView::section{background:rgb(198, 200, 195);}</string>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">索引</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_mdb_path">
+            <property name="text">
+             <string>MDB文件路径：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_mdb_path">
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:1px solid gray;
+
+        width:300px;
+        border-radius:10px;
+        padding:2px 4px;	</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Normal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:1px solid gray;
+border-radius:5px;</string>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>表名：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>New Database</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Add Project</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Find</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="text">
+             <string>Show DataBase</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QToolBox" name="toolBox">
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <property name="tabSpacing">
+             <number>4</number>
+            </property>
+            <widget class="QWidget" name="page_1">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>98</width>
+               <height>89</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>当日任务：</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="tableWidget1">
+                <property name="contextMenuPolicy">
+                 <enum>Qt::CustomContextMenu</enum>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QHeaderView::section{background:rgb(198, 200, 195);}
+QTableWidget{border:1px solid gray;}</string>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="sizeAdjustPolicy">
+                 <enum>QAbstractScrollArea::AdjustToContents</enum>
+                </property>
+                <property name="sortingEnabled">
+                 <bool>true</bool>
+                </property>
+                <property name="columnCount">
+                 <number>7</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>70</number>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>ID</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>State</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Start_Time</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Finsh_Time</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Project_Name</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Content</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Remarks</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>98</width>
+               <height>89</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>迁移的任务：</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="tableWidget2">
+                <property name="contextMenuPolicy">
+                 <enum>Qt::CustomContextMenu</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QHeaderView::section{background:rgb(198, 200, 195);}
+QTableWidget{border:1px solid gray;}</string>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="sizeAdjustPolicy">
+                 <enum>QAbstractScrollArea::AdjustToContents</enum>
+                </property>
+                <property name="sortingEnabled">
+                 <bool>true</bool>
+                </property>
+                <property name="columnCount">
+                 <number>7</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>70</number>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>ID</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>State</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Start_Time</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Finsh_Time</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Project_Name</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Content</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Remarks</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>810</width>
+               <height>424</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>长期及取消的任务：</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="tableWidget3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="contextMenuPolicy">
+                 <enum>Qt::CustomContextMenu</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QHeaderView::section{background:rgb(198, 200, 195);}
+QTableWidget{border:1px solid gray;}</string>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="sizeAdjustPolicy">
+                 <enum>QAbstractScrollArea::AdjustToContents</enum>
+                </property>
+                <property name="sortingEnabled">
+                 <bool>true</bool>
+                </property>
+                <property name="columnCount">
+                 <number>7</number>
+                </property>
+                <attribute name="horizontalHeaderDefaultSectionSize">
+                 <number>70</number>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>ID</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>State</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Start_Time</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Finsh_Time</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Project_Name</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Content</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Remarks</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>lineEdit_mdb_path</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>treeWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>choose_mdb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>622</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>782</x>
+     <y>26</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeWidget</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>tree_item_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>476</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>112</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget1</sender>
+   <signal>itemChanged(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>modify()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>448</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget1</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTips()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget2</sender>
+   <signal>itemChanged(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>modify()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>337</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget2</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTips()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget3</sender>
+   <signal>itemClicked(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTips()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>899</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget3</sender>
+   <signal>itemChanged(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>modify()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>700</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>minimize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>50</x>
+     <y>34</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>maximize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>15</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createMDB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>948</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>drawTreeByDate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>drawTreeByName()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>165</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget1</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>tableMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>763</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget2</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>tableMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>766</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget3</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>tableMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>348</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>601</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeWidget</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>treeMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>198</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>closewindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>216</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addProject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>874</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>979</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_find_item()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>906</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>971</x>
+     <y>124</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget1</sender>
+   <signal>itemDoubleClicked(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_find_item()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>863</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>989</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget2</sender>
+   <signal>itemDoubleClicked(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_find_item()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>895</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>988</x>
+     <y>348</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget3</sender>
+   <signal>itemDoubleClicked(QTableWidgetItem*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_find_item()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>877</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>991</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeWidget</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addProject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>579</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show_base_info()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>969</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>994</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>login()</slot>
+  <slot>choose_mdb()</slot>
+  <slot>new()</slot>
+  <slot>save()</slot>
+  <slot>pwd_hide()</slot>
+  <slot>tree_item_click()</slot>
+  <slot>modify()</slot>
+  <slot>showTips()</slot>
+  <slot>newRow()</slot>
+  <slot>quit()</slot>
+  <slot>minimize()</slot>
+  <slot>maximize()</slot>
+  <slot>createMDB()</slot>
+  <slot>openEdit()</slot>
+  <slot>drawTreeByDate()</slot>
+  <slot>drawTreeByName()</slot>
+  <slot>resize()</slot>
+  <slot>addRemark()</slot>
+  <slot>saveRemarks()</slot>
+  <slot>print_clicked()</slot>
+  <slot>export()</slot>
+  <slot>tableMenu()</slot>
+  <slot>treeMenu()</slot>
+  <slot>closewindow()</slot>
+  <slot>addProject()</slot>
+  <slot>open_find_item()</slot>
+  <slot>show_base_info()</slot>
+ </slots>
+</ui>

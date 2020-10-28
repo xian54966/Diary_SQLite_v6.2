@@ -1,0 +1,25 @@
+set pythonpath=venv\Lib\site-packages
+nuitka --mingw64  --standalone   --windows-disable-console --show-progress --show-memory --plugin-enable=qt-plugins --plugin-enable=pylint-warnings --recurse-all  --windows-icon=Resource\Images\Dairy.ico --output-dir=out --remove-output MainWindow.py
+
+--remove-output     Removes the build directory after producing the module  or exe file. Defaults to off.
+在生成模块或EXE文件后删除构建目录。默认关闭。
+--mingw64 #默认为已经安装的vs2017去编译，否则就按指定的比如mingw
+
+--standalone 独立文件，这是必须的
+
+--windows-disable-console 没有CMD控制窗口
+
+--recurse-all 所有的资源文件 这个也选上
+
+-recurse-not-to=numpy,jinja2 不编译的模块，防止速度会更慢
+
+--output-dir=out 生成exe到out文件夹下面去
+
+--show-progress 显示编译的进度，很直观
+
+--show-memory 显示内存的占用
+
+--plugin-enable=pylint-warnings 报警信息
+
+--plugin-enable=qt-plugins 需要加载的PyQT插件
+--windows-icon=icon.icon   添加程序图标
